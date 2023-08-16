@@ -21,8 +21,9 @@
 
     --cor-principal: #FFA500;
     --cor-secundaria: #ff7a0d;*/
-    --cor-escura: #212121;
+    --cor-escura: #2b2b2b;
     --cor-clara: #f1f1f1;
+    --cor-mixblend: #e7e7e7;
 }
 
 *{
@@ -30,8 +31,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 html,
 body{
@@ -52,13 +51,10 @@ ul{
     list-style: none;
 }
 
-
 /* .cabecalho */
+
 header{
     height: 100%;
-    /*background: url("/imagens/teste-fotofundo.png") no-repeat bottom center;
-    background-size: contain;*/
- 
 }
 
 header .cabecalho{
@@ -66,12 +62,17 @@ header .cabecalho{
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 1em;
-    background-color: transparent;
     height: 70px;
-    position: fixed;
     width: 100vw;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    border-bottom: 1px solid var(--cor-escura);
+    background-color: var(--cor-clara); 
 }
+
 
 header .cabecalho .logo {
     width: 80px;
@@ -81,12 +82,11 @@ header .cabecalho .logo {
 
 header .cabecalho svg{
     width: 100%;
-    height: 100%;
-    fill: white;
+    height: 100%;  
 }
 
 header .cabecalho svg g{
-    /*fill: white;*/
+    fill: var(--cor-escura)
 }
 
 header .cabecalho .navbar{
@@ -103,31 +103,33 @@ header .cabecalho .navbar ul{
     justify-content: space-evenly;
     width: 100%;
     top: 69px;
-    right: -0.5px;
+    right: 0;
     position: absolute;
-    background: transparent;
-    border-bottom-left-radius: 25px;
+    background: var(--cor-clara);
+    border-bottom: 1px solid var(--cor-escura);
 }
 
 header .cabecalho .navbar ul li{
     color: var(--cor-escura);
     text-transform: capitalize;
     padding: .5em;
-    font-size: .9em;
+    font-size: .8em;
+    position: relative;
 }
 
-header .cabecalho .navbar ul li:nth-child(1){
+header .cabecalho .navbar ul li.active::before,
+header .cabecalho .navbar ul li:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--cor-escura);
+    transform:translateY(3px) translateX(50%);
+    opacity: 0.9;
+}
     
-}
-
-header .cabecalho .navbar ul li:nth-child(2),li:nth-child(3){
-    
-}
-
-header .cabecalho .navbar ul li:nth-child(4){
-    
-}
-
 header #hamburguer-menu-wrapper{
     display: flex;
     justify-content: center;
@@ -137,6 +139,9 @@ header #hamburguer-menu-wrapper{
     width: 42px;
     border-radius: 50%;
     transition: .3s ease-in-out;
+    border: none;
+    outline: none !important; 
+    cursor: pointer;
 }
 
 header .hamburguer-menu-central{
@@ -148,7 +153,8 @@ header .hamburguer-menu-central{
     transition: .3s ease-in-out;
 }
 
-header .hamburguer-menu-central:before,.hamburguer-menu-central:after {
+header .hamburguer-menu-central:before,
+.hamburguer-menu-central:after {
     content: "";
     left: 0;
     width: 100%;
@@ -212,45 +218,64 @@ header .cabecalho .tema > .box-check{
 
 header .cabecalho .tema > .box-check .bolinha{
     position: absolute;
-    background-color: var(--cor-clara);
+    background-color: var(--cor-escura);
     width: 22px;
     height: 22px;
     border-radius: 50%;
     top: 3px;
+    left:7px;
     transition: all .2s ease-in-out;
 }
 
 input[type='checkbox']:checked + span.box-check > span{
-    transform: translateX(41px);
+    transform: translateX(38px);
 }
 
-header .cabecalho .tema span img{   
-    width: 35%;
+header .cabecalho .tema span svg{   
+    width: 19px;
 }
 
 header .cabecalho .tema span #sol-icone{ 
     margin-right: 14px;
-    margin-top: 2px;
 }
 
-header .inicio div{
-    padding: 12em 2em 0;
+/* INICIO */
+
+header .inicio {
+    padding: 7em 2em 0;
     height: 100%;
 }
 
-header .inicio div p.apresentacao{
-    color: var(--cor-escura);
+header .inicio .foto{
+    width: 250px;
+    height: 250px;  
+    margin: auto;
+}
+
+header .inicio .foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--cor-escura);
+}
+
+header .inicio .apresentacao{
+    height: 100%;
+    margin-top: 4.5em;
+}
+
+header .inicio .apresentacao p{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.2em;
+    font-size: 1.25em;
     font-weight: normal;
     height: 100px;
     width: 100%;
-    margin: 50px 0 0  50px;
-    -webkit-animation: text-pop-up-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: text-pop-up-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    margin: 40px 0 0  50px;
+    -webkit-animation: text-pop-up-tl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: text-pop-up-tl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
     
 @-webkit-keyframes text-pop-up-tl {
@@ -260,12 +285,14 @@ header .inicio div p.apresentacao{
       -webkit-transform-origin: 50% 50%;
               transform-origin: 50% 50%;
       text-shadow: none;
+              opacity: 0.1;
     }
     100% {
       -webkit-transform: translateY(-50px) translateX(-50px);
               transform: translateY(-50px) translateX(-50px);
       -webkit-transform-origin: 50% 50%;
               transform-origin: 50% 50%;
+              opacity: 1;
     }
 }
 @keyframes text-pop-up-tl {
@@ -274,6 +301,7 @@ header .inicio div p.apresentacao{
               transform: translateY(0) translateX(0);
       -webkit-transform-origin: 50% 50%;
               transform-origin: 50% 50%;
+              opacity: 0.1;  
       text-shadow: none;
     }
     100% {
@@ -281,46 +309,88 @@ header .inicio div p.apresentacao{
               transform: translateY(-50px) translateX(-50px);
       -webkit-transform-origin: 50% 50%;
               transform-origin: 50% 50%;
+              opacity: 1;
     }
 }
 
-header .inicio div p span{
+header .inicio .apresentacao p span{
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
-header .inicio div .inicio-redes{
+header .inicio .apresentacao .inicio-redes{
     display: flex;
     justify-content: space-around;
+    margin-top: -10px;
 }
 
-header .inicio div .inicio-redes li{
+header .inicio .apresentacao .inicio-redes li{
     padding: .5em 1em;
     border: 1px solid var(--cor-escura);
+    color: var(--cor-escura);
     cursor: pointer;
 }
 
+header .inicio .apresentacao .inicio-redes li a{
+    display: flex;
+    width: 90px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tilt-bottom-wrapper{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 445px;
+    height: 445px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);  
+    background-color: var(--cor-mixblend);
+    mix-blend-mode: difference; 
+}
 
 /* MAIN */
 
-main .inicio{
-    height: 100vh;
-    /*background: url("/imagens/fundo-section.jpg") no-repeat top center; 
-    background-size: cover;*/  
+
+main{
+    padding: 1em;
+    position: relative;
 }
 
-main .inicio::after{
+main::before{
+    background-image: linear-gradient(to bottom black blue);
+}
+
+main > h1{
+    font-size: 1.6em;
+}
+
+main > h1::after{
     content: '';
-    position: absolute;
-    background-color: red;
-    top: 40px;
-    right: 40px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: rgb(43,43,43);
+    background: linear-gradient(90deg, rgba(43,43,43,1) 0%, rgba(43,43,43,0.8533788515406162) 50%, rgba(43,43,43,0.654499299719888) 100%);
 }
 
+/* SOBRE MIM */
 
 
 
 
 
+body::-webkit-scrollbar{
+    width: 9px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track{
+    background: transparent;        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb{
+    background-color: var(--cor-escura);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid transparent;  /* creates padding around scroll thumb */
+}
 
-/* Dark Theme */
