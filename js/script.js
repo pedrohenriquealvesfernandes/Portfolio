@@ -12,6 +12,7 @@ const hamburguerInp = document.getElementById("hamburguerInp")
 
 const sections = document.querySelectorAll('section')
 const navLinks = document.querySelectorAll('.nav_link')
+const cabecalho = document.querySelector(".cabecalho")
 
 /* --------------------------------------------------------- */
 
@@ -24,8 +25,14 @@ themeCheck.addEventListener('click',()=>{
 
 menuHamburguer.addEventListener('click',()=>{
     hamburguerInp.checked = !hamburguerInp.checked
-    navLista.style.display = navLista.style.display === 'flex' ? 'none' : 'flex';
-    document.querySelector(".cabecalho").style.border = 'none'
+
+    if (navLista.style.display === 'flex') {
+        navLista.style.display = 'none';
+        document.querySelector(".cabecalho").style.borderBottom = '1px solid black'; 
+    } else {
+        navLista.style.display = 'flex';
+        document.querySelector(".cabecalho").style.borderBottom = 'none'; 
+    }
 })
 
 
