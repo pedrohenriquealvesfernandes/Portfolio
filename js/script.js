@@ -14,6 +14,9 @@ const sections = document.querySelectorAll('section')
 const navLinks = document.querySelectorAll('.nav_link')
 const cabecalho = document.querySelector(".cabecalho")
 
+/* Efeito hidden */
+const hiddenElements = document.querySelectorAll('.hidden')
+
 /* --------------------------------------------------------- */
 
 /* Theme */
@@ -53,8 +56,17 @@ window.addEventListener('scroll',()=>{
     })
 })
 
-/* */
+/* Efeito hidden com observer */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry)=> {
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add('show')
+        }
+    })
+})
 
+hiddenElements.forEach((el) => observer.observe(el));
 
 
 
