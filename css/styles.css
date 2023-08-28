@@ -312,11 +312,11 @@ input[type='checkbox']:checked + span.box-check > span{
     height: 100%;
 }
 
-.inicio p{
+.inicio > p{
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
-    padding: 3.5rem 0;
+    padding: 3.5rem 1.5rem;
     font-weight: bold;
     text-shadow: .0325em 0.0325em var(--cor-secundaria);
 }
@@ -373,8 +373,8 @@ input[type='checkbox']:checked + span.box-check > span{
 
 .inicio .redes{
     display: flex;
-    justify-content: space-between;
-    margin-top: 2.5em;
+    justify-content: space-around;
+    margin: 2.5em 0 1.3em;
 }
 
 .inicio .redes button {
@@ -421,6 +421,33 @@ input[type='checkbox']:checked + span.box-check > span{
     margin-right: 3px;
 }
 
+.inicio .scrolldown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicio .scrolldown p{
+    font-size: .85rem;
+}
+
+.inicio .scrolldown img{
+    width: 20px;
+    animation: arrowshow infinite ease-in 1.2s;
+}
+
+@keyframes arrowshow{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }50%{
+        opacity: 1;
+    }100%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
 /* MAIN */
 
 main{ 
@@ -428,7 +455,7 @@ main{
 }
 
 main section{
-    padding: 1em;
+    padding: 2em 1em; 
 }
 
 main h1{
@@ -513,7 +540,7 @@ main h1 .relativo::after{
 }
 
 @media(prefers-reduced-motion){
-    .hidder{
+    .hidden{
         transition: none;
     }
 }
@@ -680,7 +707,7 @@ main h1 .relativo::after{
 }
 
 .habilidades .skills-wrapper p{
-    margin: .3rem 0 1.25rem;
+    margin: .3rem 0 1.5rem;
     text-align: center;
 }
 
@@ -693,7 +720,7 @@ main h1 .relativo::after{
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .habilidades .skills-wrapper .info-text {
         display: none; 
     }
@@ -756,32 +783,32 @@ main h1 .relativo::after{
     background-color: var(--cor-secundaria);
 }
 
-.contato form{
-    display: grid;
-    row-gap: .5rem;
-}
-
-.contato .contato-intro{
+.contato .formulario .contato-intro{
     display: flex;
     justify-content: space-between;
     margin: 1rem 0;
 }
 
-.contato .contato-intro-redes{
+.contato .formulario .contato-intro-redes{
     max-width: 115px;
     display: flex;
     justify-content: end;
     flex-wrap: wrap;
 }
 
-.contato .contato-intro-redes ion-icon{
+.contato .formulario .contato-intro-redes ion-icon{
     font-size: 2.25rem;
     color: var(--background);
     padding:.25rem .5rem;
 }
 
-.contato .contato-intro-redes ion-icon:hover{
+.contato .formulario .contato-intro-redes ion-icon:hover{
     transform: scale(1.1);
+}
+
+.contato .formulario form{
+    display: grid;
+    row-gap: .5rem;
 }
 
 .contato form input,textarea{
@@ -797,12 +824,12 @@ main h1 .relativo::after{
     color: var(--text);
 }
 
-.contato form input:focus,
-.contato form textarea:focus{
+.contato .formulario form input:focus,
+.contato .formulario form textarea:focus{
     outline: 1px solid var(--cor-primaria);
 }
 
-.contato form button{
+.contato .formulario form button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -810,12 +837,12 @@ main h1 .relativo::after{
     outline: none;
     padding: 1em 0;
     background-color: var(--cor-primaria);
-    width: 50%;
+    width: 225px;
     margin: 0 auto;
     font-size: .9rem;
 }
 
-.contato form button ion-icon{
+.contato .formulario form button ion-icon{
     margin-left: 5px;
     font-size: .8rem;
 }
