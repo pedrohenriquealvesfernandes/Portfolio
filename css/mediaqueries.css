@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* TABLET */
+
+@media screen and (min-width:720px) {
+    /* inicio */
+
+    .inicio .redes{
+        justify-content: space-evenly;
+    }
+
+    /* sobre mim */
+
+    .conteudo .conteudo-flex{
+        display: grid;
+        grid-template-columns: 55% 45%;
+    }
+
+    .conteudo .conteudo-flex .conteudo-texto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sobre-mim ,.conteudo-flex .sobre-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-mim .conteudo-flex .sobre-img img{
+        display: block;
+        width: 275px;
+    }
+
+}
+
+@media screen and (min-width:950px) {
+    /* cabecalho */
+
+    #hamburguer-menu-wrapper{
+        display: none;
+    }
+
+    .cabecalho .navbar ul{
+        display: flex;
+        border-bottom: none;
+        position: static;
+    }
+
+    .cabecalho .navbar ul a{
+        font-size: .9rem;
+        padding: 0.5rem .75rem;
+        margin: 0 .5rem;
+    }
+}

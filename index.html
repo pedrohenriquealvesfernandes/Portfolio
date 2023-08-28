@@ -61,9 +61,9 @@
                     </span>
                 </div>
                 </div>
-            <div class="language">
+            <!--<div class="language">
                 <img src="./imagens/icones/brasil.png" alt="brasil-flag">
-            </div>
+            </div>-->
             <div class="inicio">  
                 <p>Olá, eu sou <span class="nome">Pedro Alves</span><span class="funcao">Desenvolvedor Front-End.</span></p>
                 <div class="foto">
@@ -86,9 +86,18 @@
     <main>
         <section id="sobre" class="sobre-mim ">
             <div class="conteudo">
-                <h1>SOBRE MIM</h1>
-                <p>Sou um desenvolvedor front-end com um ano de experiência, adquirida principalmente por meio de projetos pessoais e fictícios que desenvolvi. Meu objetivo é me tornar um profissional referência em programação.</p>
-                <p>Procuro sempre desenvolver sites responsivos e otimizados para SEO. Ainda que iniciante,constantemente estudo mais sobre novas tecnologias, frameworks para poder aprimorar minhas capacidades para desenvolver.</p>
+                <h1><span class="relativo">SOBRE MIM</span></h1>
+                <div class="conteudo-flex">    
+                    <div class="conteudo-texto">
+                        <p>Sou desenvolvedor front-end com um ano de experiência, adquirida principalmente por meio de projetos pessoais, procuro sempre desenvolver sites responsivos e otimizados para SEO, constantemente estudo mais sobre novas tecnologias e frameworks para poder aprimorar minhas capacidades para desenvolver.  </p>
+                        <p>Estou entusiasmado em buscar minha primeira oportunidade profissional na área, meu objetivo é me tornar um profissional referência na área da programação. </p>
+                    </div>
+
+                    <div class="sobre-img">
+                        <img src="./imagens/undraw_appreciate_it_re_yc8h.svg" alt="Coding img">
+                    </div>
+                </div>
+
                 <div class="cards-wrapper hidden">
                     <div class="cards hidden">
                         <img src="./imagens/icones/briefcase.svg" alt="briefcase-icon">
@@ -106,12 +115,9 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <img src="" alt="">
-            </div>
         </section>
         <section id="pjt" class="projetos">
-            <h1>PROJETOS</h1>
+            <h1><span class="relativo">PROJETOS</span></h1>
             <div>
                 <div class="pjts-wrapper">
                     <img src="./imagens/pjtImages/Sosmecanica.png" alt="Projeto Sos Mecanica">  
@@ -119,7 +125,7 @@
                     <div class="conteudo-projeto">
                         <h3>SOS Mecânica </h3>
                         <span class="status andamento">(Em andamento)</span>
-                        <p>Desenvolvida como projeto de TCC, é uma plataforma web e aplicativo que simplifica o processo conexão entre clientes que buscam serviços automotivos de qualidade e prestadores confiáveis. </p>
+                        <p>Desenvolvida como projeto de TCC, é uma plataforma web e aplicativo que simplifica o processo de conexão entre clientes que buscam serviços automotivos de qualidade e prestadores confiáveis. </p>
                         <p class="tecs">PHP, JavaScript, MySql e Sass.</p>
                         <div>
                             <ul class="rep-demo">
@@ -163,11 +169,11 @@
                 </div>
             </div>  
             <div class="outros-projetos">                         
-                <a href="https://github.com/pedrohenriquealvesfernandes?tab=repositories" target="_blank">Outros projetos</a>      
+                <a href="https://github.com/pedrohenriquealvesfernandes?tab=repositories" target="_blank">Outros projetos <ion-icon name="exit-outline"></ion-icon></a>      
             </div>
         </section>
         <section id="skills" class="habilidades">
-            <h1>HABILIDADES</h1>
+            <h1><span class="relativo">HABILIDADES</span></h1>
             <div class="skills-wrapper">
                 <h2>Tech Skills</h2>
                 <p class="info-text">Para mais detalhes sobre cada habilidade passe o cursor sobre o card!</p>
@@ -191,7 +197,7 @@
                         <img src="./imagens/skillsimg/js.png" alt="JavaScript icone">
                         <div class="tecoverlay">
                             <h3>JavaScript</h3>
-                            <p>80%</p>
+                            <p>75%</p>
                         </div>
                     </div>
                     <div class="skills">
@@ -217,7 +223,6 @@
                     </div>
                 </div>
                 
-                
               <h2>Estudando</h2>  
                 <div class="estudando">
                     <div class="skills">
@@ -230,29 +235,37 @@
                         <img src="./imagens/skillsimg/typescript.png" alt="typescript icone">
                     </div>
                 </div>
-                
             </div>
         </section>  
-    </main>
-    <footer>
         <section id="cnt" class="contato">
             <div class="formulario">
                 <div class="contato-intro">
-                    <h2>Gostou do que viu?</h2>
-                    <p>Entre em contato comigo!</p>
+                    <div class="contato-intro-title">
+                        <h2>Gostou do que viu?</h2>
+                        <p>Entre em contato comigo!</p>
+                    </div>
+                    <div class="contato-intro-redes">
+                        <a href="https://www.linkedin.com/in/pedrohalves/" target="_blank"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                        <a href="https://github.com/pedrohenriquealvesfernandes" target="_blank"><ion-icon
+                            name="logo-github"></ion-icon></a>
+                        <a href="https://www.behance.net/pedrohenriqu237" target="_blank">
+                            <ion-icon name="logo-behance"></ion-icon>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=17981253484" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                    </div>
                 </div>
                 <form target="_blank" action="https://formsubmit.co/6d889989ca343a0ab02c946d34dc6d1e?message=Proposta de trabalho" method="POST" enctype="multipart/form-data" autocomplete="off">
                     <input type="text" name="nome-form" class="nome" placeholder="Nome Completo">
-                    <input type="email" name="email-form" class="email" placeholder="Email">
+                    <input type="email" name="email-form" class="email" placeholder="seu@email.com">
                     <textarea name="mensagem-form" placeholder="Mensagem" resize="none" rows="7"></textarea>
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Enviar mensagem<ion-icon name="send-outline"></ion-icon></button>
             
                 </form>  
             </div> 
-            <div class="copyright">
-
-            </div>
-        </section>
+    </main>
+    <footer>
+        <p class="copyright"></p>   
     </footer>
 </body>
 <script src="/js/script.js" defer></script>

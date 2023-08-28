@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Libre+Baskerville:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
@@ -12,7 +11,7 @@
     --fonte-destaque: 'Libre Baskerville', serif;
 
     --cor-escura: hsl(0, 0%, 17%);
-    --cor-clara: hsl(0, 0%, 90%);
+    --cor-clara: hsl(0, 0%, 93%);
 
     --text: hsl(0, 15%, 5%);
     --background: hsl(0, 0%, 100%);
@@ -25,6 +24,7 @@
     --cor-primaria-dark: hsl(30, 92%, 55%);
     --cor-secundaria-dark: #030104;
     --accent-dark: #B267FE;
+    --red: #a20000;
 
 
     /*--text-dark: #fee7e7;
@@ -113,7 +113,6 @@ header section{
     border-bottom: 1px solid var(--cor-escura);
 }
 
-
 .cabecalho .logo {
     width: 80px;
     height: 33px;
@@ -127,10 +126,6 @@ header section{
 
 .cabecalho .logo svg g{
     fill: var(--cor-escura);
-}
-
-.cabecalho .navbar{
-    width: 45px;
 }
 
 .cabecalho .navbar input{
@@ -289,14 +284,14 @@ input[type='checkbox']:checked + span.box-check > span{
 
 /* language */
 
-.language{
+/*.language{
     position: absolute;
     width: 50px;
     height: 35px;
     top: 6em;
     right: 2.5em;
-   /* background: rgb(246,140,35);
-    background: linear-gradient(45deg, rgba(246,140,35,1) 0%, rgba(246,140,35,0.6208858543417367) 100%);*/
+    background: rgb(246,140,35);
+    background: linear-gradient(45deg, rgba(246,140,35,1) 0%, rgba(246,140,35,0.6208858543417367) 100%);
     background-color: #b92db98d;
     place-items: center;
     display: flex;
@@ -308,7 +303,7 @@ input[type='checkbox']:checked + span.box-check > span{
 .language img{
     width: 50%;
     height: 75%;
-}
+}*/
 
 /* inicio */
 
@@ -317,7 +312,6 @@ input[type='checkbox']:checked + span.box-check > span{
     height: 100%;
 }
 
-
 .inicio p{
     display: flex;
     flex-direction: column;
@@ -325,8 +319,6 @@ input[type='checkbox']:checked + span.box-check > span{
     padding: 3.5rem 0;
     font-weight: bold;
     text-shadow: .0325em 0.0325em var(--cor-secundaria);
-   /* -webkit-animation: text-pop-up-tl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: text-pop-up-tl 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;*/
 }
 
 .inicio p .nome{
@@ -429,41 +421,6 @@ input[type='checkbox']:checked + span.box-check > span{
     margin-right: 3px;
 }
 
-@-webkit-keyframes text-pop-up-tl {
-    0% {
-      -webkit-transform: translateY(0) translateX(0);
-              transform: translateY(0) translateX(0);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      text-shadow: none;
-              opacity: 0.1;
-    }
-    100% {
-      -webkit-transform: translateY(-50px) translateX(-50px);
-              transform: translateY(-50px) translateX(-50px);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-              opacity: 1;
-    }
-}
-@keyframes text-pop-up-tl {
-    0% {
-      -webkit-transform: translateY(0) translateX(0);
-              transform: translateY(0) translateX(0);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-              opacity: 0.1;  
-      text-shadow: none;
-    }
-    100% {
-      -webkit-transform: translateY(-50px) translateX(-50px);
-              transform: translateY(-50px) translateX(-50px);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-              opacity: 1;
-    }
-}
-
 /* MAIN */
 
 main{ 
@@ -471,38 +428,53 @@ main{
 }
 
 main section{
-    padding: 2em 1em;
+    padding: 1em;
 }
 
 main h1{
-    position: relative;
     font-size: 2.1em;
-    margin-bottom: .75em;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     text-align: center;
 }
 
-main h1::after{
+main h1 .relativo{
+    position: relative;
+}
+
+main h1 .relativo::after{
     content: '';
     position: absolute;
     top: 0;
-    left: 25vw;
-    width: 143px;
+    left: 17.5px;
+    width: 80%;
     height: 100%;
     background-color: var(--accent);
     opacity: .65;
-    transform: skew(135deg);
+    transform: skew(135deg);  
 }
 
-/* SOBRE MIM */
+/* sobre mim */
 
 .sobre-mim{
     background-color: var(--background);
-    height: 95vh;
-    height: 95dvh;
+    height: 90vh;
+    height: 90dvh;
+    padding: 1rem 5%;
 }
 
-.sobre-mim .conteudo > p{
+.sobre-mim .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 97%;
+}
+
+.sobre-mim .conteudo{
+    margin-bottom: .25rem;
+}
+
+.sobre-mim .conteudo .conteudo-texto p{
     font-size: 1rem;
     line-height: 26px;
     letter-spacing: 1px;
@@ -513,7 +485,6 @@ main h1::after{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 7.5px;
-    margin-top: 2rem;
 }
 
 .sobre-mim .hidden{
@@ -581,9 +552,13 @@ main h1::after{
     text-align: center;
 }
 
+.sobre-mim .sobre-img{
+    display: none;
+}
+
 /* projetos */
 .projetos{
-    background-color: var(--background);
+    background-color: rgb(244, 244, 244);
 }
 
 .projetos > div .pjts-wrapper{
@@ -668,12 +643,19 @@ main h1::after{
 }
 
 .projetos .outros-projetos a{
+    display: flex;
+    align-items: center;
     padding: .5rem .8rem;
     border: none;
     color: var(--text);
     background-color: var(--cor-primaria);
     font-size: .95rem;
     font-weight: 500;
+}
+
+.projetos .outros-projetos a ion-icon{
+    font-size: 1.3rem;
+    margin-left: 4px;
 }
 
 /* habilidades */
@@ -724,8 +706,8 @@ main h1::after{
 
 .habilidades .skills-wrapper  .skills{
     padding: .5rem ;
-    background-color: rgb(243, 242, 242);
-    box-shadow: 0px 0px 5px 0px rgba(128, 0, 128, 0.453);
+    background-color: var(--cor-clara);
+    box-shadow: 0px 0px 10px 3px var(--cor-secundaria);
     border-radius: 5px;
     position: relative;
 }
@@ -742,7 +724,7 @@ main h1::after{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--cor-clara);
     color: var(--text);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -768,17 +750,10 @@ main h1::after{
     opacity: 1;
 }
 
-/* FOOTER */
-
-footer{
-    padding: 1em;
-    background-color: var(--cor-clara);
-}
-
 /* contato */
 
 .contato{
-  
+    background-color: var(--cor-secundaria);
 }
 
 .contato form{
@@ -787,7 +762,26 @@ footer{
 }
 
 .contato .contato-intro{
-    margin: 1rem 0 1rem 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.contato .contato-intro-redes{
+    max-width: 115px;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.contato .contato-intro-redes ion-icon{
+    font-size: 2.25rem;
+    color: var(--background);
+    padding:.25rem .5rem;
+}
+
+.contato .contato-intro-redes ion-icon:hover{
+    transform: scale(1.1);
 }
 
 .contato form input,textarea{
@@ -799,6 +793,8 @@ footer{
     border: none;
     outline: none; 
     border-radius: 5px;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 .contato form input:focus,
@@ -807,14 +803,44 @@ footer{
 }
 
 .contato form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     outline: none;
     padding: 1em 0;
     background-color: var(--cor-primaria);
     width: 50%;
     margin: 0 auto;
+    font-size: .9rem;
 }
 
+.contato form button ion-icon{
+    margin-left: 5px;
+    font-size: .8rem;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--cor-secundaria);
+    padding: 1em;
+}
+
+footer::before{
+    content: '';
+    display: block;
+    margin: 0 auto .5rem;
+    width: 70%;
+    height: 1px;
+    background-color: #030104;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    font-size: 85%;
+}
 
 
 

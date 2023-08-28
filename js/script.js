@@ -17,6 +17,7 @@ const cabecalho = document.querySelector(".cabecalho")
 /* Efeito hidden */
 const hiddenElements = document.querySelectorAll('.hidden')
 
+
 /* --------------------------------------------------------- */
 
 /* Theme */
@@ -42,7 +43,7 @@ menuHamburguer.addEventListener('click',()=>{
 let currentSection = 'home'
 window.addEventListener('scroll',()=>{
     sections.forEach(sec =>{
-        if(window.scrollY >= (sec.offsetTop + 500)){
+        if(window.scrollY >= (sec.offsetTop + 200)){
             currentSection = sec.id;
         }
     })
@@ -67,6 +68,11 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+/* Copyright data */
+const anoAtual = new Date().getFullYear()
+const copyright = document.querySelector(".copyright")
+copyright.innerHTML = `&copy;${anoAtual} Pedro Alves. Todos os direitos reservados.`
 
 
 
