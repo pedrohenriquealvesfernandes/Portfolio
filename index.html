@@ -1,279 +1,418 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio | Pedro Alves</title>
-    <link rel="shortcut icon" href="/imagens/palogo-preta.svg" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/darkmode.css">
-    <link rel="stylesheet" href="css/mediaqueries.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="/imagens/palogo-preta.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/darkmode.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+  </head>
 
-<body class="dark">
+  <body class="dark">
     <header>
-        <section id="#home">
-            <div class="cabecalho">
-                <div class="logo" >
-                    <a href="#home">
-                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="368.000000pt" height="149.000000pt"
-                            viewBox="0 0 368.000000 149.000000" preserveAspectRatio="xMidYMid meet">
-                            <g transform="translate(0.000000,149.000000) scale(0.100000,-0.100000)" fill="#000000"
-                                stroke="none">
-                                <path d="M56 1438 c-11 -41 -7 -1368 4 -1389 10 -18 25 -19 348 -19 185 0 343
-                            4 350 8 10 7 12 156 10 713 l-3 704 -351 3 -352 2 -6 -22z" />
-                                <path d="M820 883 l0 -576 58 6 c227 24 423 182 492 397 17 54 23 95 23 168 1
-                            168 -51 293 -167 408 -106 104 -205 149 -363 167 l-43 5 0 -575z" />
-                                <path d="M1622 738 l3 -723 45 0 45 0 3 723 2 722 -50 0 -50 0 2 -722z" />
-                                <path d="M2807 1422 c-222 -22 -258 -28 -254 -41 6 -19 567 -1345 572 -1349 5
-                            -5 515 42 525 48 11 7 -560 1362 -575 1365 -5 1 -126 -9 -268 -23z" />
-                                <path d="M2230 690 c-151 -352 -276 -645 -278 -650 -2 -7 195 -10 558 -10 362
-                            0 560 3 558 10 -14 42 -554 1289 -558 1289 -3 0 -129 -287 -280 -639z" />
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class="navbar">
-                    <input type="checkbox" id="hamburguerInp">
-                    <label for="hamburguerInp">
-                        <button id="hamburguer-menu-wrapper">
-                            <div class="hamburguer-menu-central"></div>
-                        </button>
-                    </label>
-                    <nav>
-                        <ul class="navbar-lista">
-                            <li><a href="#sobre" class="nav_link">Sobre mim</a></li>             
-                            <li><a href="#pjt" class="nav_link">Projetos</a></li>
-                            <li><a href="#skills" class="nav_link">Habilidades</a></li>
-                            <li><a href="#cnt" class="nav_link">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="tema">
-                    <input type="checkbox" name="change-theme" id="change-theme">
-                    <span class="box-check">
-                        <span class="bolinha"></span>
-                        <span class="icons-boxcheck">
-                            <img src="imagens/icones/sol-icone.png" alt="Sol-icone">
-                            <img src="imagens/icones/lua-icone.png" alt="lua-icone">                    
-                        </span>
-                    </span>
-                </div>
-                </div>
-            <!--<div class="language">
+      <section id="#home">
+        <div class="cabecalho">
+          <div class="logo">
+            <a href="#home">
+              <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="368.000000pt"
+                height="149.000000pt"
+                viewBox="0 0 368.000000 149.000000"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <g
+                  transform="translate(0.000000,149.000000) scale(0.100000,-0.100000)"
+                  fill="#000000"
+                  stroke="none"
+                >
+                  <path
+                    d="M56 1438 c-11 -41 -7 -1368 4 -1389 10 -18 25 -19 348 -19 185 0 343
+                            4 350 8 10 7 12 156 10 713 l-3 704 -351 3 -352 2 -6 -22z"
+                  />
+                  <path
+                    d="M820 883 l0 -576 58 6 c227 24 423 182 492 397 17 54 23 95 23 168 1
+                            168 -51 293 -167 408 -106 104 -205 149 -363 167 l-43 5 0 -575z"
+                  />
+                  <path
+                    d="M1622 738 l3 -723 45 0 45 0 3 723 2 722 -50 0 -50 0 2 -722z"
+                  />
+                  <path
+                    d="M2807 1422 c-222 -22 -258 -28 -254 -41 6 -19 567 -1345 572 -1349 5
+                            -5 515 42 525 48 11 7 -560 1362 -575 1365 -5 1 -126 -9 -268 -23z"
+                  />
+                  <path
+                    d="M2230 690 c-151 -352 -276 -645 -278 -650 -2 -7 195 -10 558 -10 362
+                            0 560 3 558 10 -14 42 -554 1289 -558 1289 -3 0 -129 -287 -280 -639z"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="navbar">
+            <input type="checkbox" id="hamburguerInp" />
+            <label for="hamburguerInp">
+              <button id="hamburguer-menu-wrapper">
+                <div class="hamburguer-menu-central"></div>
+              </button>
+            </label>
+            <nav>
+              <ul class="navbar-lista">
+                <li><a href="#sobre" class="nav_link">Sobre mim</a></li>
+                <li><a href="#pjt" class="nav_link">Projetos</a></li>
+                <li><a href="#skills" class="nav_link">Habilidades</a></li>
+                <li><a href="#cnt" class="nav_link">Contato</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="tema">
+            <input type="checkbox" name="change-theme" id="change-theme" />
+            <span class="box-check">
+              <span class="bolinha"></span>
+              <span class="icons-boxcheck">
+                <img src="imagens/icones/sol-icone.png" alt="Sol-icone" />
+                <img src="imagens/icones/lua-icone.png" alt="lua-icone" />
+              </span>
+            </span>
+          </div>
+        </div>
+        <!--<div class="language">
                 <img src="./imagens/icones/brasil.png" alt="brasil-flag">
             </div>-->
-            <div class="inicio">  
-                <p>Olá, eu sou <span class="nome">Pedro Alves</span><span class="funcao">Desenvolvedor Front-End.</span></p>
-                <div class="foto">
-                    <div class="img-wrapper"></div>
-                    <img src="/imagens/foto-nova.png" alt="foto-minha">
-                </div>
-                <div class="redes">
-                    <button>
-                         <a href="https://www.linkedin.com/in/pedrohalves/" target="_blank"><ion-icon
-                                                name="logo-linkedin"></ion-icon> LinkedIn</a>
-                    </button>
-                    <button>
-                        <a href="https://github.com/pedrohenriquealvesfernandes" target="_blank"><ion-icon
-                                                name="logo-github"></ion-icon> GitHub</a>
-                    </button>
-                </div>
-                <div class="scrolldown">
-                    <p>Veja mais!</p>
-                    <img src="./imagens/setaicon.svg" alt="arrow down">
-                </div>
-            </div>
-        </section>
+        <div class="inicio">
+          <p>
+            Olá, eu sou <span class="nome">Pedro Alves</span
+            ><span class="funcao">Desenvolvedor Front-End.</span>
+          </p>
+          <div class="foto">
+            <div class="img-wrapper"></div>
+            <img src="/imagens/foto-nova.png" alt="foto-minha" />
+          </div>
+          <div class="redes">
+            <button>
+              <a href="https://www.linkedin.com/in/pedrohalves/" target="_blank"
+                ><ion-icon name="logo-linkedin"></ion-icon> LinkedIn</a
+              >
+            </button>
+            <button>
+              <a
+                href="https://github.com/pedrohenriquealvesfernandes"
+                target="_blank"
+                ><ion-icon name="logo-github"></ion-icon> GitHub</a
+              >
+            </button>
+          </div>
+          <div class="scrolldown">
+            <p>Veja mais!</p>
+            <img src="./imagens/setaicon.svg" alt="arrow down" />
+          </div>
+        </div>
+      </section>
     </header>
     <main>
-        <section id="sobre" class="sobre-mim ">
-            <div class="conteudo">
-                <h1><span class="relativo">SOBRE MIM</span></h1>
-                <div class="conteudo-flex">    
-                    <div class="conteudo-texto">
-                        <p>Sou desenvolvedor front-end com um ano de experiência, adquirida principalmente por meio de projetos pessoais, procuro sempre desenvolver sites responsivos e otimizados para SEO, constantemente estudo mais sobre novas tecnologias e frameworks para poder aprimorar minhas capacidades para desenvolver.  </p>
-                        <p>Estou entusiasmado em buscar minha primeira oportunidade profissional na área, meu objetivo é me tornar um profissional referência na área da programação. </p>
-                    </div>
-
-                    <div class="sobre-img">
-                        <img src="./imagens/undraw_appreciate_it_re_yc8h.svg" alt="Coding img">
-                    </div>
-                </div>
-
-                <div class="cards-wrapper hidden">
-                    <div class="cards hidden">
-                        <img src="./imagens/icones/briefcase.svg" alt="briefcase-icon">
-                        <p>FreeLancer / CLT / PJ</p>
-                    </div>
-
-                    <div class="cards hidden">
-                        <img src="./imagens/icones/school.svg" alt="school-icon">
-                        <p>Informática para Negócios</p>
-                    </div>  
-                                 
-                    <div class="cards hidden">
-                        <img src="./imagens/icones/location.svg" alt="location-icon">
-                        <p>São José do Rio Preto - SP</p>
-                    </div>
-                </div>
+      <section id="sobre" class="sobre-mim">
+        <div class="conteudo">
+          <h1><span class="relativo">SOBRE MIM</span></h1>
+          <div class="conteudo-flex">
+            <div class="conteudo-texto">
+              <p>
+                Sou desenvolvedor front-end com um ano de experiência, adquirida
+                principalmente por meio de projetos pessoais, procuro sempre
+                desenvolver sites responsivos e otimizados para SEO,
+                constantemente estudo mais sobre novas tecnologias e frameworks
+                para poder aprimorar minhas capacidades para desenvolver.
+              </p>
+              <p>
+                Estou entusiasmado em buscar minha primeira oportunidade
+                profissional na área, meu objetivo é me tornar um profissional
+                referência na área da programação.
+              </p>
             </div>
-        </section>
-        <section id="pjt" class="projetos">
-            <h1><span class="relativo">PROJETOS</span></h1>
-            <div>
-                <div class="pjts-wrapper">
-                    <img src="./imagens/pjtImages/Sosmecanica.png" alt="Projeto Sos Mecanica">  
-                    
-                    <div class="conteudo-projeto">
-                        <h3>SOS Mecânica </h3>
-                        <span class="status andamento">(Em andamento)</span>
-                        <p>Desenvolvida como projeto de TCC, é uma plataforma web e aplicativo que simplifica o processo de conexão entre clientes que buscam serviços automotivos de qualidade e prestadores confiáveis. </p>
-                        <p class="tecs">PHP, JavaScript, MySql e Sass.</p>
-                        <div>
-                            <ul class="rep-demo">
-                                <li><a href="#" target="_blank">Repositório <ion-icon name="logo-github"></ion-icon></a></li>
-                                <li><a href="#" target="_blank">Live Demo <ion-icon name="enter-outline"></ion-icon></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="pjts-wrapper">
-                    <img src="./imagens/pjtImages/portfolio.png" alt="Portfolio">  
-                    
-                    <div class="conteudo-projeto">
-                        <h3>Portfólio</h3>            
-                        <span class="status finalizado">(Finalizado)</span>
-                        <p>Esse portfólio foi desenvolvido com o intuito de demonstrar quem eu sou e meus conhecimentos através dos meus projetos.</p>
-                        <p class="tecs">HTML, CSS e JavaScript.</p>
-                        <div>
-                            <ul class="rep-demo">
-                                <li><a href="#" target="_blank">Repositório <ion-icon name="logo-github"></ion-icon></a></li>
-                                <li><a href="#" target="_blank">Live Demo <ion-icon name="enter-outline"></ion-icon></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="pjts-wrapper">
-                    <img src="./imagens/pjtImages/agecalculator.png" alt="Projeto Age Calculator">  
-                    
-                    <div class="conteudo-projeto">
-                        <h3>Age calculator </h3>             
-                        <span class="status finalizado">(Finalizado)</span>
-                        <p>Calculadora irá mostrar a diferença entre a data atual e a data inserida em anos, meses e dias. Disponibilizado por <a href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor</a>.</p>
-                        <p class="tecs">HTML, CSS, JavaScript e API(momentejs).</p>
-                        <div>
-                            <ul class="rep-demo">
-                                <li><a href="https://github.com/pedrohenriquealvesfernandes/age-calculator-app" target="_blank">Repositório <ion-icon name="logo-github"></ion-icon></a></li>
-                                <li><a href="https://pedrohenriquealvesfernandes.github.io/age-calculator-app/" target="_blank">Live Demo <ion-icon name="enter-outline"></ion-icon></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-            <div class="outros-projetos">                         
-                <a href="https://github.com/pedrohenriquealvesfernandes?tab=repositories" target="_blank">Outros projetos <ion-icon name="exit-outline"></ion-icon></a>      
+
+            <div class="sobre-img">
+              <img
+                src="./imagens/undraw_appreciate_it_re_yc8h.svg"
+                alt="Coding img"
+              />
             </div>
-        </section>
-        <section id="skills" class="habilidades">
-            <h1><span class="relativo">HABILIDADES</span></h1>
-            <div class="skills-wrapper">
-                <h2>Tech Skills</h2>
-                <p class="info-text">Para mais detalhes sobre cada habilidade passe o cursor sobre o card!</p>
-                <p class="info-text-mobile">Para mais detalhes sobre cada habilidade toque no card!</p>
-                <div class="techskills">
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/html.png" alt="HTML icone">
-                        <div class="tecoverlay">
-                            <h3>HTML5</h3>
-                            <p>95%</p>
-                        </div>
-                    </div>
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/css-3.png" alt="CSS icone">
-                        <div class="tecoverlay">
-                            <h3>CSS3</h3>
-                            <p>90%</p>
-                        </div>
-                    </div>
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/js.png" alt="JavaScript icone">
-                        <div class="tecoverlay">
-                            <h3>JavaScript</h3>
-                            <p>75%</p>
-                        </div>
-                    </div>
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/sass.png" alt="Sass icone">
-                        <div class="tecoverlay">
-                            <h3>Sass</h3>
-                            <p>60%</p>
-                        </div>
-                    </div>
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/php.png" alt="PHP icone">
-                        <div class="tecoverlay">
-                            <h3>PHP</h3>
-                            <p>40%</p>
-                        </div>
-                    </div>
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/mysql.png" alt="MySql icone">
-                        <div class="tecoverlay">
-                            <h3>MySql</h3>
-                            <p>40%</p>
-                        </div>
-                    </div>
-                </div>
-                
-              <h2>Estudando</h2>  
-                <div class="estudando">
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/react.png" alt="React icone">
-                    </div>
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/node-js.png" alt="nodeJs icone">
-                    </div>
-                    <div class="skills">
-                        <img src="./imagens/skillsimg/typescript.png" alt="typescript icone">
-                    </div>
-                </div>
+          </div>
+
+          <div class="cards-wrapper hidden">
+            <div class="cards hidden">
+              <img src="./imagens/icones/briefcase.svg" alt="briefcase-icon" />
+              <p>FreeLancer / CLT / PJ</p>
             </div>
-        </section>  
-        <section id="cnt" class="contato">
-            <div class="formulario">
-                <div class="contato-intro">
-                    <div class="contato-intro-title">
-                        <h2>Gostou do que viu?</h2>
-                        <p>Entre em contato comigo!</p>
-                    </div>
-                    <div class="contato-intro-redes">
-                        <a href="https://www.linkedin.com/in/pedrohalves/" target="_blank"><ion-icon
-                            name="logo-linkedin"></ion-icon></a>
-                        <a href="https://github.com/pedrohenriquealvesfernandes" target="_blank"><ion-icon
-                            name="logo-github"></ion-icon></a>
-                        <a href="https://www.behance.net/pedrohenriqu237" target="_blank">
-                            <ion-icon name="logo-behance"></ion-icon>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=17981253484" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                    </div>
-                </div>
-                <form target="_blank" action="https://formsubmit.co/6d889989ca343a0ab02c946d34dc6d1e?message=Proposta de trabalho" method="POST" enctype="multipart/form-data" autocomplete="off">
-                    <input type="text" name="nome-form" class="nome" placeholder="Nome">
-                    <input type="email" name="email-form" class="email" placeholder="seu@email.com">
-                    <textarea name="mensagem-form" placeholder="Mensagem" resize="none" rows="7"></textarea>
-                    <button type="submit">Enviar mensagem<ion-icon name="send-outline"></ion-icon></button>
-                </form>  
-            </div> 
+
+            <div class="cards hidden">
+              <img src="./imagens/icones/school.svg" alt="school-icon" />
+              <p>Informática para Negócios</p>
+            </div>
+
+            <div class="cards hidden">
+              <img src="./imagens/icones/location.svg" alt="location-icon" />
+              <p>São José do Rio Preto - SP</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="pjt" class="projetos">
+        <h1><span class="relativo">PROJETOS</span></h1>
+        <div>
+          <div class="pjts-wrapper">
+            <img
+              src="./imagens/pjtImages/Sosmecanica.png"
+              alt="Projeto Sos Mecanica"
+            />
+
+            <div class="conteudo-projeto">
+              <h3>SOS Mecânica</h3>
+              <span class="status andamento">(Em andamento)</span>
+              <p>
+                Desenvolvida como projeto de TCC, é uma plataforma web e
+                aplicativo que simplifica o processo de conexão entre clientes
+                que buscam serviços automotivos de qualidade e prestadores
+                confiáveis.
+              </p>
+              <p class="tecs">PHP, JavaScript, MySql e Sass.</p>
+              <div>
+                <ul class="rep-demo">
+                  <li>
+                    <a href="#" target="_blank"
+                      >Repositório <ion-icon name="logo-github"></ion-icon
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"
+                      >Live Demo <ion-icon name="enter-outline"></ion-icon
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="pjts-wrapper">
+            <img src="./imagens/pjtImages/portfolio.png" alt="Portfolio" />
+
+            <div class="conteudo-projeto">
+              <h3>Portfólio</h3>
+              <span class="status finalizado">(Finalizado)</span>
+              <p>
+                Esse portfólio foi desenvolvido com o intuito de demonstrar quem
+                eu sou e meus conhecimentos através dos meus projetos.
+              </p>
+              <p class="tecs">HTML, CSS e JavaScript.</p>
+              <div>
+                <ul class="rep-demo">
+                  <li>
+                    <a href="#" target="_blank"
+                      >Repositório <ion-icon name="logo-github"></ion-icon
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"
+                      >Live Demo <ion-icon name="enter-outline"></ion-icon
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="pjts-wrapper">
+            <img
+              src="./imagens/pjtImages/agecalculator.png"
+              alt="Projeto Age Calculator"
+            />
+
+            <div class="conteudo-projeto">
+              <h3>Age calculator</h3>
+              <span class="status finalizado">(Finalizado)</span>
+              <p>
+                Calculadora irá mostrar a diferença entre a data atual e a data
+                inserida em anos, meses e dias. Disponibilizado por
+                <a href="https://www.frontendmentor.io/home" target="_blank"
+                  >Frontend Mentor</a
+                >.
+              </p>
+              <p class="tecs">HTML, CSS, JavaScript e API(momentejs).</p>
+              <div>
+                <ul class="rep-demo">
+                  <li>
+                    <a
+                      href="https://github.com/pedrohenriquealvesfernandes/age-calculator-app"
+                      target="_blank"
+                      >Repositório <ion-icon name="logo-github"></ion-icon
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://pedrohenriquealvesfernandes.github.io/age-calculator-app/"
+                      target="_blank"
+                      >Live Demo <ion-icon name="enter-outline"></ion-icon
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="outros-projetos">
+          <a
+            href="https://github.com/pedrohenriquealvesfernandes?tab=repositories"
+            target="_blank"
+            >Outros projetos <ion-icon name="exit-outline"></ion-icon
+          ></a>
+        </div>
+      </section>
+      <section id="skills" class="habilidades">
+        <h1><span class="relativo">HABILIDADES</span></h1>
+        <div class="skills-wrapper">
+          <h2>Tech Skills</h2>
+          <p class="info-text">
+            Para mais detalhes sobre cada habilidade passe o cursor sobre o
+            card!
+          </p>
+          <p class="info-text-mobile">
+            Para mais detalhes sobre cada habilidade toque no card!
+          </p>
+          <div class="techskills">
+            <div class="skills">
+              <img src="./imagens/skillsimg/html.png" alt="HTML icone" />
+              <div class="tecoverlay">
+                <h3>HTML5</h3>
+                <p>95%</p>
+              </div>
+            </div>
+            <div class="skills">
+              <img src="./imagens/skillsimg/css-3.png" alt="CSS icone" />
+              <div class="tecoverlay">
+                <h3>CSS3</h3>
+                <p>90%</p>
+              </div>
+            </div>
+            <div class="skills">
+              <img src="./imagens/skillsimg/js.png" alt="JavaScript icone" />
+              <div class="tecoverlay">
+                <h3>JavaScript</h3>
+                <p>75%</p>
+              </div>
+            </div>
+            <div class="skills">
+              <img src="./imagens/skillsimg/sass.png" alt="Sass icone" />
+              <div class="tecoverlay">
+                <h3>Sass</h3>
+                <p>60%</p>
+              </div>
+            </div>
+            <div class="skills">
+              <img src="./imagens/skillsimg/php.png" alt="PHP icone" />
+              <div class="tecoverlay">
+                <h3>PHP</h3>
+                <p>40%</p>
+              </div>
+            </div>
+            <div class="skills">
+              <img src="./imagens/skillsimg/mysql.png" alt="MySql icone" />
+              <div class="tecoverlay">
+                <h3>MySql</h3>
+                <p>40%</p>
+              </div>
+            </div>
+          </div>
+
+          <h2>Estudando</h2>
+          <div class="estudando">
+            <div class="skills">
+              <img src="./imagens/skillsimg/react.png" alt="React icone" />
+            </div>
+            <div class="skills">
+              <img src="./imagens/skillsimg/node-js.png" alt="nodeJs icone" />
+            </div>
+            <div class="skills">
+              <img
+                src="./imagens/skillsimg/typescript.png"
+                alt="typescript icone"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cnt" class="contato">
+        <div class="formulario">
+          <div class="contato-intro">
+            <div class="contato-intro-title">
+              <h2>Gostou do que viu?</h2>
+              <p>Entre em contato comigo!</p>
+            </div>
+            <div class="contato-intro-redes">
+              <a href="https://www.linkedin.com/in/pedrohalves/" target="_blank"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a
+                href="https://github.com/pedrohenriquealvesfernandes"
+                target="_blank"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a href="https://www.behance.net/pedrohenriqu237" target="_blank">
+                <ion-icon name="logo-behance"></ion-icon>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?1=pt_BR&phone=17981253484"
+                target="_blank"
+                ><ion-icon name="logo-whatsapp"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <form
+            target="_blank"
+            action="https://formsubmit.co/6d889989ca343a0ab02c946d34dc6d1e?message=Proposta de trabalho"
+            method="POST"
+            enctype="multipart/form-data"
+            autocomplete="off"
+          >
+            <input
+              type="text"
+              name="nome-form"
+              class="nome"
+              placeholder="Nome"
+            />
+            <input
+              type="email"
+              name="email-form"
+              class="email"
+              placeholder="seu@email.com"
+            />
+            <textarea
+              name="mensagem-form"
+              placeholder="Mensagem"
+              resize="none"
+              rows="7"
+            ></textarea>
+            <button type="submit">
+              Enviar mensagem<ion-icon name="send-outline"></ion-icon>
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
-        <p class="copyright"></p>   
+      <p class="copyright"></p>
     </footer>
-</body>
-<script src="/js/script.js" defer></script>
-<script src="/js/darkmode.js" defer></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+  </body>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/darkmode.js" defer></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
 </html>

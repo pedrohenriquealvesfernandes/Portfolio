@@ -2,107 +2,108 @@
 
 /* TABLET */
 
-@media screen and (min-width:720px) {
-    /* inicio */
+@media screen and (min-width: 720px) {
+  /* inicio */
 
-    .inicio .redes{
-        justify-content: space-evenly;
-    }
+  .inicio .redes {
+    justify-content: space-evenly;
+  }
 
-    /* sobre mim */
+  /* sobre mim */
 
-    .conteudo .conteudo-flex{
-        display: grid;
-        grid-template-columns: 55% 45%;
-    }
+  .conteudo .conteudo-flex {
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
 
-    .conteudo .conteudo-flex .conteudo-texto{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  .conteudo .conteudo-flex .conteudo-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .sobre-mim ,.conteudo-flex .sobre-img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .sobre-mim,
+  .conteudo-flex .sobre-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .sobre-mim .conteudo-flex .sobre-img img{
-        display: block;
-        width: 275px;
-    }
-
+  .sobre-mim .conteudo-flex .sobre-img img {
+    display: block;
+    width: 275px;
+  }
 }
 
-@media screen and (min-width:950px) {
-    /* cabecalho */
+@media screen and (min-width: 950px) {
+  /* cabecalho */
 
-    #hamburguer-menu-wrapper{
-        display: none;
-    }
+  #hamburguer-menu-wrapper {
+    display: none;
+  }
 
-    .cabecalho .navbar ul{
-        display: flex;
-        border-bottom: none;
-        position: static;
-    }
+  .cabecalho .navbar ul {
+    display: flex;
+    border-bottom: none;
+    position: static;
+  }
 
-    .cabecalho .navbar ul a{
-        font-size: .9rem;
-        padding: 0.5rem .75rem;
-        margin: 0 .5rem;
-    }
+  .cabecalho .navbar ul a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 0.5rem;
+  }
 
-    /* projetos*/
+  /* projetos*/
 
-    .projetos > div .pjts-wrapper{
-        display: grid;
-        grid-template-columns: 53% 45% ;
-        gap: 2%;
-        margin-bottom: 3rem;
-    }
+  .projetos > div .pjts-wrapper {
+    display: grid;
+    grid-template-columns: 53% 45%;
+    gap: 2%;
+    margin-bottom: 3rem;
+  }
 
-    .projetos > div .pjts-wrapper .conteudo-projeto{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  .projetos > div .pjts-wrapper .conteudo-projeto {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    /* contato */
-    .contato{
-        padding: 2rem 20rem;
-    }
+  /* contato */
+  .contato {
+    padding: 2rem 20rem;
+  }
 
-    .contato .formulario{
-        display: grid;
-        grid-template-columns: 37% 61%;
-        gap: 2%;
-    }
+  .contato .formulario {
+    display: grid;
+    grid-template-columns: 37% 61%;
+    gap: 2%;
+  }
 
-    .contato .formulario .contato-intro{
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 0 1.5rem 0;
-    }
+  .contato .formulario .contato-intro {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 1.5rem 0;
+  }
 
-    .contato .formulario .contato-intro-title{
-        padding-left: 0.5rem;
-    }
+  .contato .formulario .contato-intro-title {
+    padding-left: 0.5rem;
+  }
 
-    .contato .formulario .contato-intro-redes{
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-     
-    .contato .formulario .contato-intro-redes ion-icon{
-        font-size: 3rem;
-    }
+  .contato .formulario .contato-intro-redes {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .contato form input,textarea{
-        width: 100%;
-    }
+  .contato .formulario .contato-intro-redes ion-icon {
+    font-size: 3rem;
+  }
+
+  .contato form input,
+  textarea {
+    width: 100%;
+  }
 }
