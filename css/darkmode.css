@@ -14,7 +14,7 @@
 }
 /* header */
 .dark header {
-  background: url("./imagens/fundo-header-dark.svg") center bottom no-repeat;
+  background: url("../imagens/fundo-header-dark.svg") center bottom no-repeat;
   background-size: cover;
 }
 
