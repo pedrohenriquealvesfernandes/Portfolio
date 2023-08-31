@@ -9,29 +9,14 @@
   --fonte-principal: "Space Grotesk", sans-serif;
   --fonte-destaque: "Libre Baskerville", serif;
 
-  --cor-escura: hsl(0, 0%, 17%);
+  --cor-escura: #2b2b2b;
   --cor-clara: hsl(0, 0%, 93%);
 
-  --text: hsl(0, 15%, 5%);
-  --background: hsl(0, 0%, 100%);
+  --text: #0f0b0b;
+  --background: #ffffff;
   --cor-primaria: #f68c23;
   --cor-secundaria: #c1daf0;
   --accent: #b92db9;
-
-  --text-dark: #f2ebfa;
-  --background-dark: #140920;
-  --cor-primaria-dark: hsl(30, 92%, 55%);
-  --cor-secundaria-dark: #030104;
-  --accent-dark: #b267fe;
-  --red: #a20000;
-
-  /*--text-dark: #fee7e7;
-    --background-dark: #0f0b0b;
-    --cor-primaria-dark: #ff870e00;
-    --cor-secundaria-dark: #011414;
-    --accent-dark: #7ebcfa;*/
-
-  /*--cor-mixblend: #dbdbdb;*/
 }
 
 * {
@@ -70,11 +55,11 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   position: relative;
   z-index: -1;
-  background: transparent;
+  background-color: inherit;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 166, 0, 0.486);
+  background-color: rgba(255, 166, 0, 0.761);
   border-radius: 20px;
   border: 3px solid transparent;
 }
@@ -83,7 +68,7 @@ body::-webkit-scrollbar-thumb {
 
 header {
   height: 100%;
-  background: url(/imagens/layered-waves-haikei.svg) center bottom no-repeat;
+  background: url("./imagens/fundo-header-light.svg") center bottom no-repeat;
   background-size: cover;
 }
 
@@ -106,13 +91,12 @@ header section {
   right: 0;
   z-index: 999;
   background-color: var(--background);
-  border-bottom: 1px solid var(--cor-escura);
+  border-bottom: 1px solid;
 }
 
 .cabecalho .logo {
   width: 80px;
   height: 33px;
-  background: transparent;
 }
 
 .cabecalho svg {
@@ -130,22 +114,27 @@ header section {
 
 .cabecalho .navbar ul {
   display: none;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  width: 100%;
+  width: 50%;
+  height: 90vh;
   top: 70px;
-  right: 0;
+  left: 0;
   position: absolute;
   z-index: 999;
   background-color: var(--background);
-  border-bottom: 1px solid var(--cor-escura);
+  border-right: 1px solid var(--cor-escura);
+}
+
+.show-nav {
+  display: flex !important;
 }
 
 .cabecalho .navbar ul a {
   color: var(--cor-escura);
   text-transform: capitalize;
   padding: 0.5em;
-  font-size: 0.8em;
+  font-size: 0.85rem;
   position: relative;
 }
 
@@ -215,11 +204,7 @@ header section {
   background-color: var(--background);
 }
 
-.cabecalho .navbar input:checked ~ label .hamburguer-menu-central::before {
-  transform: rotate(90deg);
-  background-color: var(--background);
-}
-
+.cabecalho .navbar input:checked ~ label .hamburguer-menu-central::before,
 .cabecalho .navbar input:checked ~ label .hamburguer-menu-central::after {
   transform: rotate(90deg);
   background-color: var(--background);
@@ -325,9 +310,16 @@ input[type="checkbox"]:checked + span.box-check > span {
 .inicio p .funcao {
   font-size: 1.9rem;
   text-transform: uppercase;
-  color: var(--cor-primaria);
   font-weight: bolder;
-  text-shadow: 0.075em 0.075em var(--cor-secundaria);
+  text-shadow: none;
+  background: rgb(246, 140, 35);
+  background: linear-gradient(
+    90deg,
+    rgba(246, 140, 35, 1) 0%,
+    rgb(228, 46, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .inicio .foto {
@@ -390,20 +382,21 @@ input[type="checkbox"]:checked + span.box-check > span {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 4px;
+  inset: 5px 4px;
   width: 100%;
   height: 100%;
   background-color: var(--cor-escura);
   transition: transform 0.3s ease-in-out;
   transform: translate(0, 0);
+  cursor: pointer;
 }
 
 .inicio .redes button:hover {
-  transform: translate(4px, 4px);
+  transform: translate(4px, 5px);
 }
 
 .inicio .redes button:hover::before {
-  transform: translate(-4px, -4px);
+  transform: translate(-4px, -5px);
 }
 
 .inicio .redes button a {
@@ -519,18 +512,6 @@ main h1 .relativo::after {
   transition: 1.25s;
 }
 
-.cards:nth-child(1) {
-  transition-delay: 100ms;
-}
-
-.cards:nth-child(2) {
-  transition-delay: 500ms;
-}
-
-.cards:nth-child(3) {
-  transition-delay: 500ms;
-}
-
 .sobre-mim .show {
   opacity: 1;
   filter: blur(0);
@@ -575,6 +556,7 @@ main h1 .relativo::after {
 .sobre-mim .cards-wrapper .cards p {
   font-size: 0.85rem;
   text-align: center;
+  transition-duration: none;
 }
 
 .sobre-mim .sobre-img {
@@ -589,14 +571,18 @@ main h1 .relativo::after {
 .projetos > div .pjts-wrapper {
   display: flex;
   flex-direction: column;
+  background-color: var(--background);
+  border-radius: 5px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.226);
+  padding: 1rem;
+  margin-bottom: 3rem;
 }
 
 .projetos > div .pjts-wrapper img {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  outline: 2px solid var(--cor-secundaria);
-  outline-offset: 3px;
+  border: 1px solid rgba(21, 21, 21, 0.476);
   filter: grayscale(0%) saturate(150%);
 }
 
@@ -651,6 +637,10 @@ main h1 .relativo::after {
   border: 1px solid var(--text);
 }
 
+.projetos > div .pjts-wrapper .conteudo-projeto ul li:hover a {
+  color: var(--cor-primaria);
+}
+
 .projetos > div .pjts-wrapper .conteudo-projeto ul li a {
   display: flex;
   align-items: center;
@@ -684,6 +674,14 @@ main h1 .relativo::after {
 
 /* habilidades */
 
+.habilidades {
+  height: 85vh;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .habilidades .techskills,
 .habilidades .estudando {
   display: flex;
@@ -703,7 +701,7 @@ main h1 .relativo::after {
   margin: 2rem 0 1.25rem;
 }
 
-.habilidades .skills-wrapper p {
+.habilidades .skills-wrapper > p {
   margin: 0.3rem 0 1.5rem;
   text-align: center;
 }
@@ -748,7 +746,7 @@ main h1 .relativo::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--cor-clara);
+  background-color: rgba(208, 208, 208, 0.827);
   color: var(--text);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -768,6 +766,7 @@ main h1 .relativo::after {
   border: 1px solid black;
   border-radius: 50%;
   padding: 0.75rem 0.5rem;
+  margin-top: 0.3rem;
 }
 
 .habilidades .skills-wrapper .skills:hover .tecoverlay {
@@ -838,6 +837,7 @@ textarea {
   width: 225px;
   margin: 0 auto;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .contato .formulario form button ion-icon {

@@ -1,0 +1,181 @@
+:root {
+  --cor-escura: hsl(0, 0%, 17%);
+  --cor-clara: hsl(0, 0%, 93%);
+
+  --text-dark: rgb(220, 220, 220);
+  --background-dark: hsl(5, 5%, 5%);
+  --cor-primaria-dark: hsl(30, 92%, 55%);
+  --cor-secundaria-dark: #0a2841;
+  --accent-dark: hsl(300, 61%, 75%);
+}
+
+.dark {
+  background-color: var(--background-dark);
+}
+/* header */
+.dark header {
+  background: url("./imagens/fundo-header-dark.svg") center bottom no-repeat;
+  background-size: cover;
+}
+
+/* cabecalho */
+
+.dark .cabecalho {
+  background-color: var(--background-dark);
+  border-bottom: 1px solid var(--cor-clara);
+}
+
+.dark .cabecalho .logo svg g {
+  fill: var(--cor-clara);
+}
+
+.dark .cabecalho .navbar ul {
+  background-color: var(--background-dark);
+  border-right: 1px solid var(--cor-clara);
+}
+
+.dark .cabecalho .navbar ul a {
+  color: var(--cor-clara);
+  text-decoration: none;
+}
+
+.dark .cabecalho .navbar ul a.active {
+  color: var(--cor-primaria);
+}
+
+.dark .hamburguer-menu-central,
+.dark .hamburguer-menu-central:before,
+.dark .hamburguer-menu-central:after {
+  background-color: var(--cor-clara);
+}
+
+.dark .cabecalho .navbar input:checked ~ label .hamburguer-menu-central,
+.dark .cabecalho .navbar input:checked ~ label .hamburguer-menu-central::before,
+.dark .cabecalho .navbar input:checked ~ label .hamburguer-menu-central::after {
+  background-color: var(--cor-escura);
+}
+
+.dark .cabecalho .navbar input:checked ~ label #hamburguer-menu-wrapper {
+  background-color: var(--cor-clara);
+}
+
+.dark .cabecalho .tema > .box-check {
+  border: 1px solid var(--cor-clara);
+}
+
+.dark .cabecalho .tema > .box-check .bolinha {
+  background-color: var(--cor-clara);
+}
+
+/* inicio */
+
+.dark .inicio > p {
+  text-shadow: 0.0325em 0.0325em var(--cor-secundaria-dark);
+  color: var(--text-dark);
+}
+
+.dark .inicio .foto .img-wrapper {
+  border: 3.5px solid var(--cor-secundaria-dark);
+}
+
+.dark .inicio .redes button {
+  background-color: var(--cor-clara);
+  outline: 2px solid var(--cor-secundaria-dark);
+}
+
+.dark .inicio .redes button::before {
+  background-color: var(--cor-clara);
+}
+
+.dark .inicio .redes button a {
+  color: var(--cor-secundaria-dark);
+}
+
+.dark .inicio .redes button a ion-icon {
+  color: var(--cor-secundaria-dark);
+}
+
+/* sobre-mim */
+
+.dark .sobre-mim {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.dark .sobre-mim .conteudo-flex .sobre-img img.appreciate-light {
+  display: none;
+}
+
+.dark .sobre-mim .conteudo-flex .sobre-img img.appreciate-dark {
+  display: block;
+}
+
+/* projetos */
+
+.dark .projetos {
+  background-color: rgb(22, 22, 22);
+  color: var(--text-dark);
+}
+
+.dark .projetos h1 {
+  color: var(--text-dark);
+}
+
+.dark .projetos > div .pjts-wrapper {
+  background-color: var(--background-dark);
+}
+
+.dark .projetos > div .pjts-wrapper .conteudo-projeto ul li {
+  border: 1px solid var(--text-dark);
+}
+
+.dark .projetos .outros-projetos a {
+  color: hsl(0, 0%, 100%);
+}
+
+.dark .projetos .outros-projetos a ion-icon {
+  color: hsl(0, 0%, 100%);
+}
+
+/* habilidades */
+
+.dark .habilidades {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.dark .habilidades .skills-wrapper .skills {
+  background-color: var(--cor-escura);
+  box-shadow: 0px 0px 10px 3px var(--cor-secundaria-dark);
+}
+
+.dark .habilidades .skills-wrapper .skills .tecoverlay {
+  background-color: rgba(14, 14, 14, 0.827);
+  color: var(--text-dark);
+}
+
+.dark .habilidades .skills-wrapper .skills .tecoverlay p {
+  border: 1px solid white;
+}
+
+/* contato */
+
+.dark .contato {
+  background-color: var(--cor-secundaria-dark);
+  color: var(--text-dark);
+}
+
+.dark .contato .formulario form button {
+  color: var(--text-dark);
+}
+
+/* footer */
+
+.dark footer {
+  background-color: var(--cor-secundaria-dark);
+  color: var(--text-dark);
+}
+
+.dark footer:before {
+  background-color: var(--text-dark);
+}

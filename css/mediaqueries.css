@@ -5,6 +5,18 @@
 @media screen and (min-width: 720px) {
   /* inicio */
 
+  .inicio > p {
+    font-size: 1.7rem;
+  }
+
+  .inicio > p .nome {
+    font-size: 2rem;
+  }
+
+  .inicio > p .funcao {
+    font-size: 2.4rem;
+  }
+
   .inicio .redes {
     justify-content: space-evenly;
   }
@@ -33,6 +45,10 @@
     display: block;
     width: 275px;
   }
+
+  .sobre-mim .conteudo-flex .sobre-img img.appreciate-dark {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -44,8 +60,15 @@
 
   .cabecalho .navbar ul {
     display: flex;
-    border-bottom: none;
+    flex-direction: row;
     position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+
+  .dark .cabecalho .navbar ul {
+    border-right: none;
   }
 
   .cabecalho .navbar ul a {
@@ -60,7 +83,6 @@
     display: grid;
     grid-template-columns: 53% 45%;
     gap: 2%;
-    margin-bottom: 3rem;
   }
 
   .projetos > div .pjts-wrapper .conteudo-projeto {
@@ -72,7 +94,7 @@
 
   /* contato */
   .contato {
-    padding: 2rem 20rem;
+    padding: 2rem 19%;
   }
 
   .contato .formulario {
