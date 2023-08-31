@@ -485,7 +485,7 @@ main h1 .relativo::after {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 97%;
+  height: 100%;
 }
 
 .sobre-mim .conteudo {
@@ -675,11 +675,7 @@ main h1 .relativo::after {
 /* habilidades */
 
 .habilidades {
-  height: 85vh;
-  padding: 0 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  padding: 2rem 1em;
 }
 
 .habilidades .techskills,
