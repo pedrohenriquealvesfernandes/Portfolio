@@ -132,7 +132,7 @@ header section {
 
 .cabecalho .navbar ul a {
   color: var(--cor-escura);
-  text-transform: capitalize;
+  text-transform: uppercase;
   padding: 0.5em;
   font-size: 0.85rem;
   position: relative;
